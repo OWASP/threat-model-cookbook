@@ -1,0 +1,182 @@
+digraph tm {
+	graph [
+	fontname = Arial;
+	fontsize = 14;
+	]
+	node [
+	fontname = Arial;
+	fontsize = 14;
+	rankdir = lr;
+	]
+	edge [
+	shape = none;
+	fontname = Arial;
+	fontsize = 12;
+	]
+	labelloc = "t";
+	fontsize = 20;
+	nodesep = 1;
+
+subgraph cluster_fbeabbaffbddabbabcfedb {
+	graph [
+		fontsize = 10;
+		fontcolor = firebrick2;
+		style = dashed;
+		color = firebrick2;
+		label = <<i>player's local machine</i>>;
+	]
+
+fbcaeddddeefdddddaa [
+	shape = square;
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Player</b></td></tr></table>>;
+]
+bbdaeeabfbcadceebcadaebc [
+	shape = square;
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Anonymous<br/>WWW User-Agent</b></td></tr></table>>;
+]
+eeacbebacadfdaeabacaddc [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Game<br/>Client</b></td></tr></table>>;
+]
+bdddedacabacdfeddffdaadd [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Browser</b></td></tr></table>>;
+]
+
+}
+
+subgraph cluster_fbacafbcbcedbcdfdbaffce {
+	graph [
+		fontsize = 10;
+		fontcolor = firebrick2;
+		style = dashed;
+		color = firebrick2;
+		label = <<i>corp network</i>>;
+	]
+
+eabceadefdfcedfdedbf [
+	shape = square;
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Customer Support</b></td></tr></table>>;
+]
+
+}
+
+subgraph cluster_ebadbbacbbbedfbcbfaabfe {
+	graph [
+		fontsize = 10;
+		fontcolor = firebrick2;
+		style = dashed;
+		color = firebrick2;
+		label = <<i>prod network</i>>;
+	]
+
+aaadadabaedafcbfbfcaf [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Website<br/>Stats</b></td></tr></table>>;
+]
+abadddfbbebffeabdaecdddcdefedb [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Lobby</b></td></tr></table>>;
+]
+caecbddedafabcdeefbbfacddfefd [
+	shape = doublecircle;
+	color = black;
+
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color="black"><b>Game<br/>Servers</b></font></td></tr></table>>;
+]
+fdedbaafbdebedfaaceeadebccb [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Moderation<br/>Website</b></td></tr></table>>;
+]
+cafbafcaeebacedecccaccfa [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>API REST</b></td></tr></table>>;
+]
+eaafdccecbcfaabcc [
+	shape = none;
+	color = black;
+	label = <<table sides="TB" cellborder="0" cellpadding="2"><tr><td><font color="black"><b>Player Database</b></font></td></tr></table>>;
+]
+aefaafefabdabbbfefa [
+	shape = none;
+	color = black;
+	label = <<table sides="TB" cellborder="0" cellpadding="2"><tr><td><font color="black"><b>Stats Database</b></font></td></tr></table>>;
+]
+
+}
+
+	fbcaeddddeefdddddaa -> eeacbebacadfdaeabacaddc [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>Uses/Launch</b></font></td></tr></table>>;
+	]
+	fbcaeddddeefdddddaa -> bdddedacabacdfeddffdaadd [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>Uses/Launch</b></font></td></tr></table>>;
+	]
+	bbdaeeabfbcadceebcadaebc -> aaadadabaedafcbfbfcaf [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	bdddedacabacdfeddffdaadd -> aaadadabaedafcbfbfcaf [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>HTTPS</b></font></td></tr></table>>;
+	]
+	aaadadabaedafcbfbfcaf -> cafbafcaeebacedecccaccfa [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	aaadadabaedafcbfbfcaf -> eaafdccecbcfaabcc [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	eeacbebacadfdaeabacaddc -> abadddfbbebffeabdaecdddcdefedb [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>TCP 1234</b></font></td></tr></table>>;
+	]
+	eeacbebacadfdaeabacaddc -> caecbddedafabcdeefbbfacddfefd [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>TCP 1235</b></font></td></tr></table>>;
+	]
+	abadddfbbebffeabdaecdddcdefedb -> caecbddedafabcdeefbbfacddfefd [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	abadddfbbebffeabdaecdddcdefedb -> eaafdccecbcfaabcc [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	abadddfbbebffeabdaecdddcdefedb -> cafbafcaeebacedecccaccfa [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	fdedbaafbdebedfaaceeadebccb -> eaafdccecbcfaabcc [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	eabceadefdfcedfdedbf -> fdedbaafbdebedfaaceeadebccb [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	caecbddedafabcdeefbbfacddfefd -> aefaafefabdabbbfefa [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>r/w</b></font></td></tr></table>>;
+	]
+	caecbddedafabcdeefbbfacddfefd -> eaafdccecbcfaabcc [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	cafbafcaeebacedecccaccfa -> aefaafefabdabbbfefa [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>r/o</b></font></td></tr></table>>;
+	]
+	cafbafcaeebacedecccaccfa -> eaafdccecbcfaabcc [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+}

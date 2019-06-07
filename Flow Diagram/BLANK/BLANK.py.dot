@@ -1,0 +1,73 @@
+digraph tm {
+	graph [
+	fontname = Arial;
+	fontsize = 14;
+	]
+	node [
+	fontname = Arial;
+	fontsize = 14;
+	rankdir = lr;
+	]
+	edge [
+	shape = none;
+	fontname = Arial;
+	fontsize = 12;
+	]
+	labelloc = "t";
+	fontsize = 20;
+	nodesep = 1;
+
+subgraph cluster_cacebafcaebeabfbbacecaba {
+	graph [
+		fontsize = 10;
+		fontcolor = firebrick2;
+		style = dashed;
+		color = firebrick2;
+		label = <<i> </i>>;
+	]
+
+bfecadfeecdeafdaedadecf [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Process</b></td></tr></table>>;
+]
+fcbdafdbbdcfcbbbefdee [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Another<br/>Process</b></td></tr></table>>;
+]
+ffaddaddffcafad [
+	shape = none;
+	color = black;
+	label = <<table sides="TB" cellborder="0" cellpadding="2"><tr><td><font color="black"><b>Datastore</b></font></td></tr></table>>;
+]
+deddbeacafbddfdccbcbccbbf [
+	shape = doublecircle;
+	color = black;
+
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color="black"><b>Multiples<br/>Process</b></font></td></tr></table>>;
+]
+
+}
+
+dcecfdcdcbadffbc [
+	shape = square;
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Actor<br/>(user)</b></td></tr></table>>;
+]
+	dcecfdcdcbadffbc -> bfecadfeecdeafdaedadecf [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>HTTPS</b></font></td></tr></table>>;
+	]
+	bfecadfeecdeafdaedadecf -> fcbdafdbbdcfcbbbefdee [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>HTTP</b></font></td></tr></table>>;
+	]
+	fcbdafdbbdcfcbbbefdee -> ffaddaddffcafad [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	bfecadfeecdeafdaedadecf -> deddbeacafbddfdccbcbccbbf [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>?</b></font></td></tr></table>>;
+	]
+}
