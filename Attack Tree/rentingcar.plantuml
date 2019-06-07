@@ -1,0 +1,83 @@
+@startuml 
+skinparam monochrome true 
+skinparam defaultTextAlignment center 
+' Root nodes 
+agent "Steal Car" as goalsteal
+agent "Disrupt business operations" as goaldisrupt
+
+' Sub goals 
+agent "Make car unrentable" as goaldos
+agent "Rent all car" as goalrentall
+
+goaldisrupt --> goaldos
+goaldisrupt --> goalrentall
+
+agent "DoS car rentals" as dosrentals
+goaldos --> dosrentals
+
+agent "Break Cars" as breakcars
+agent "DoS API Gateway" as dosapi
+agent "Mess with mobile app" as messmobile
+dosrentals --> breakcars
+' This is a good opportunity to try refactoring for better view
+' Try changing the following ---> to --> and see how it looks
+dosrentals ---> dosapi
+dosrentals --> messmobile
+
+agent "Crash Mobile App" as crashmobile
+messmobile --> crashmobile
+
+agent "Get App Removed from App Store" as removestore
+messmobile --> removestore
+
+agent "DDoS with many requests" as ddosreq
+agent "Screw certificates" as screwcerts
+agent "Gain Access to system" as gainsysaccess
+dosapi --> ddosreq
+dosapi --> screwcerts
+dosapi --> gainsysaccess
+
+agent "Steal admin credentials" as stealadmincreds
+gainsysaccess --> stealadmincreds
+
+agent "(todo)" as detailsadminscred
+stealadmincreds --> detailsadminscred
+
+agent "SF Style" as sfstyle
+goalsteal --> sfstyle
+cloud "**иии**" as cloud1
+sfstyle --> cloud1
+
+interface "and" as and1
+ goalsteal --> and1
+
+agent "Unlock Car" as unlockcar
+agent "Start Engine" as startengine
+and1 --> unlockcar
+and1 --> startengine
+
+agent "Gain Car Owner Access" as gainowner
+
+unlockcar --> gainowner
+startengine --> gainowner
+
+agent "Get Owner Credentials" as getocreds
+gainowner --> getocreds
+gainowner --> gainsysaccess
+
+agent "Steal creds from owner" as stealcreds
+getocreds --> stealcreds
+agent "Ask nicely" as nicely
+getocreds --> nicely
+
+agent "Bluetooth snarfing" as snarf
+stealcreds --> snarf
+
+agent "Evil Twin" as eviltwin
+stealcreds --> eviltwin
+
+agent "Lack of transport crypto" as lackbcrypto
+
+snarf --> lackbcrypto
+ 
+@enduml 
