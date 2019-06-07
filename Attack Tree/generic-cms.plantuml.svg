@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="439px" preserveAspectRatio="none" style="width:547px;height:439px;" version="1.1" viewBox="0 0 547 439" width="547px" zoomAndPan="magnify"><defs><filter height="300%" id="f149clyle6mu0" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity rootgoal1--><rect fill="#F8F8F8" filter="url(#f149clyle6mu0)" height="36.2969" style="stroke: #383838; stroke-width: 1.5;" width="171" x="8.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="151" x="18.5" y="30.9951">Steal confidential data</text><!--entity rootgoal2--><rect fill="#F8F8F8" filter="url(#f149clyle6mu0)" height="36.2969" style="stroke: #383838; stroke-width: 1.5;" width="182" x="215" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="162" x="225" y="30.9951">Recon for other attacks</text><!--entity gainpriv--><rect fill="#F8F8F8" filter="url(#f149clyle6mu0)" height="36.2969" style="stroke: #383838; stroke-width: 1.5;" width="174" x="6" y="200"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="154" x="16" y="222.9951">Gain privileged access</text><!--entity gatherusers--><rect fill="#F8F8F8" filter="url(#f149clyle6mu0)" height="36.2969" style="stroke: #383838; stroke-width: 1.5;" width="144" x="234" y="104"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="124" x="244" y="126.9951">Gather users data</text><!--entity compromiseenduser--><rect fill="#F8F8F8" filter="url(#f149clyle6mu0)" height="36.2969" style="stroke: #383838; stroke-width: 1.5;" width="182" x="215" y="200"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="162" x="225" y="222.9951">Compromise end users</text><!--entity xss--><rect fill="#F8F8F8" filter="url(#f149clyle6mu0)" height="36.2969" style="stroke: #383838; stroke-width: 1.5;" width="47" x="107.5" y="392"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="27" x="117.5" y="414.9951">XSS</text><!--entity guessupassword--><rect fill="#F8F8F8" filter="url(#f149clyle6mu0)" height="36.2969" style="stroke: #383838; stroke-width: 1.5;" width="155" x="228.5" y="296"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="135" x="238.5" y="318.9951">Find user password</text><!--entity bruteforce--><rect fill="#F8F8F8" filter="url(#f149clyle6mu0)" height="36.2969" style="stroke: #383838; stroke-width: 1.5;" width="97" x="223.5" y="392"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="77" x="233.5" y="414.9951">Brute force</text><!--entity passdump--><rect fill="#F8F8F8" filter="url(#f149clyle6mu0)" height="36.2969" style="stroke: #383838; stroke-width: 1.5;" width="180" x="356" y="392"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="160" x="366" y="414.9951">Find in password dump</text><!--link rootgoal1 to gainpriv--><path d="M93.9059,44.0629 C93.7243,78.9412 93.3253,155.5397 93.1229,194.3957 " fill="none" id="rootgoal1-gainpriv" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="93.0946,199.8452,97.1413,190.8661,93.1206,194.8453,89.1415,190.8245,93.0946,199.8452" style="stroke: #383838; stroke-width: 1.0;"/><!--link rootgoal2 to gatherusers--><path d="M306,44.0569 C306,59.5126 306,81.8647 306,98.6731 " fill="none" id="rootgoal2-gatherusers" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="306,103.6977,310,94.6977,306,98.6977,302,94.6977,306,103.6977" style="stroke: #383838; stroke-width: 1.0;"/><!--link gatherusers to compromiseenduser--><path d="M306,140.0569 C306,155.5126 306,177.8647 306,194.6731 " fill="none" id="gatherusers-compromiseenduser" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="306,199.6977,310,190.6977,306,194.6977,302,190.6977,306,199.6977" style="stroke: #383838; stroke-width: 1.0;"/><!--link rootgoal1 to compromiseenduser--><path d="M113.2319,44.3906 C137.098,67.1148 179.1544,106.8398 216,140 C237.5753,159.4172 262.552,180.9942 280.7117,196.5232 " fill="none" id="rootgoal1-compromiseenduser" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="284.7106,199.9393,280.4656,191.0522,280.9089,196.6917,275.2694,197.135,284.7106,199.9393" style="stroke: #383838; stroke-width: 1.0;"/><!--link compromiseenduser to xss--><path d="M280.1868,236.1727 C260.1037,250.9957 232.1833,273.1528 211,296 C184.072,325.0432 158.8505,363.5934 144.1766,387.5933 " fill="none" id="compromiseenduser-xss" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="141.5614,391.8997,149.652,386.2835,144.1568,387.6261,142.8142,382.1308,141.5614,391.8997" style="stroke: #383838; stroke-width: 1.0;"/><!--link compromiseenduser to guessupassword--><path d="M306,236.0569 C306,251.5126 306,273.8647 306,290.6731 " fill="none" id="compromiseenduser-guessupassword" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="306,295.6977,310,286.6977,306,290.6977,302,286.6977,306,295.6977" style="stroke: #383838; stroke-width: 1.0;"/><!--link guessupassword to bruteforce--><path d="M299.6049,332.0569 C294.1309,347.5126 286.2146,369.8647 280.2616,386.6731 " fill="none" id="guessupassword-bruteforce" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="278.4821,391.6977,285.2573,384.5495,280.1514,386.9846,277.7163,381.8787,278.4821,391.6977" style="stroke: #383838; stroke-width: 1.0;"/><!--link guessupassword to passdump--><path d="M332.3329,332.0569 C355.8441,348.1788 390.2981,371.8044 415.1047,388.8147 " fill="none" id="guessupassword-passdump" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="419.3092,391.6977,414.1488,383.309,415.1856,388.87,409.6245,389.9068,419.3092,391.6977" style="stroke: #383838; stroke-width: 1.0;"/><!--link gainpriv to xss--><path d="M96.5749,236.0629 C103.5062,271.0841 118.7625,348.1683 126.4225,386.8715 " fill="none" id="gainpriv-xss" style="stroke: #383838; stroke-width: 1.0;"/><polygon fill="#383838" points="127.4069,391.8452,129.5832,382.2398,126.436,386.9404,121.7355,383.7932,127.4069,391.8452" style="stroke: #383838; stroke-width: 1.0;"/><!--
+@startuml
+skinparam monochrome true
+skinparam defaultTextAlignment center
+
+agent "Steal confidential data" as rootgoal1
+agent "Recon for other attacks" as rootgoal2
+
+agent "Gain privileged access" as gainpriv
+rootgoal1 - - -> gainpriv
+
+agent "Gather users data" as gatherusers
+rootgoal2 - -> gatherusers
+
+agent "Compromise end users" as compromiseenduser
+gatherusers - -> compromiseenduser
+rootgoal1 - - -> compromiseenduser
+
+agent "XSS" as xss
+compromiseenduser - - -> xss
+
+agent "Find user password" as guessupassword
+compromiseenduser - -> guessupassword
+
+agent "Brute force" as bruteforce
+guessupassword - -> bruteforce
+agent "Find in password dump" as passdump
+guessupassword - -> passdump
+
+gainpriv - - -> xss
+@enduml
+
+PlantUML version 1.2019.04(Fri Mar 29 15:44:36 UTC 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 1.8.0_201-heroku-b09
+Operating System: Linux
+OS Version: 4.4.0-1044-aws
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
