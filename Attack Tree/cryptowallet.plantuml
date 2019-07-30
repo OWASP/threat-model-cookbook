@@ -1,0 +1,73 @@
+@startuml
+skinparam monochrome true
+skinparam defaultTextAlignment center
+
+agent "Steal cryptocurrency" as steal
+agent "Manipulate the market" as market
+agent "Invade privacy" as privacy
+
+agent "Expose their spending habits" as spy
+privacy --> spy
+agent "View their transactions on blockchain" as blockchain
+spy --> blockchain
+
+agent "Gain wallet access" as wallet
+steal --> wallet
+
+agent "**I**nternet **C**on **O**peration" as con
+steal --> con
+
+agent "Steal physical wallet\nand password" as phys
+agent "Find wallet seed" as seed
+agent "Gain access to\nlocal software wallet" as accesswallet
+agent "Gain access to\n web based wallet" as webwallet
+wallet --> phys
+wallet --> accesswallet
+wallet --> webwallet
+accesswallet --> seed
+
+agent "Weak seeding algo" as weakseed
+seed --> weakseed
+
+agent "Malware" as malware
+accesswallet --> malware
+
+agent "Gain remote access\nto local API" as api
+agent "Authentication bypass" as lackauth
+agent "DNS rebinding attack" as dnsrebind
+accesswallet --> api
+interface "and" as and
+api --> and
+and --> lackauth
+and --> dnsrebind
+
+agent "Gain exchange access" as xaccess
+agent "Steal account" as xaccount
+'agent "Compromise network" as xnetwork
+agent "API access" as xapi
+agent "Steal API keys" as xkeys
+agent "Authentication bypass" as xauthbypass
+steal --> xaccess
+xaccess ---> xaccount
+'xaccess --> xnetwork
+xaccess --> xapi
+xapi --> xkeys
+xapi --> xauthbypass
+xapi --> xaccount
+
+agent "Denial of service" as dos
+market --> dos
+market --> xaccess
+'market -> steal
+
+cloud "**···**" as another
+xaccount --> another
+cloud "**···**" as anothertwo
+cloud "**···**" as anotherthree
+xauthbypass --> anothertwo
+xkeys --> anotherthree
+
+'spy --> xaccess
+'spy --> wallet
+
+@enduml

@@ -1,10 +1,18 @@
-# threat-model-cookbook
+# OWASP Threat Model Cookbook Project
 
-- Create a leanpub book with samples of threat modes across multiple technologies, methodoligies and techniques
-- Add content about workflows
-- Do a RfTM (Request for Threat Models)
+This project is about creating and publishing threat model examples. They can be in the form of code, graphical or textual representations. The models will use diverse technologies, methodologies and techniques.
 
+You can learn from those models, use them a base to start your own, or contribute and expand some of the models. Thus making this a collaborative cookbook of threat models.
 
-## Waffle.io
+https://www.owasp.org/index.php/OWASP_Threat_Model_Cookbook
 
-See issues at https://waffle.io/OWASP/threat-model-cookbook
+https://twitter.com/OWASP_tmcb
+
+## Contributing
+
+## Licenses
+
+All models in form of textual or graphical representations are under CC-BY 4.0
+
+All models as code are under Apache License 2.0
+

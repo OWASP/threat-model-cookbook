@@ -1,0 +1,30 @@
+@startuml
+
+skinparam monochrome true 
+
+agent "Hack cloud server" as cloud
+
+agent "Hack system" as sys
+agent "Hack account" as acc
+
+cloud --> sys
+cloud --> acc
+
+agent "Hack API" as api
+agent "Hack server" as server
+
+agent "RCE" as rce
+agent "SQLi" as sqli
+
+sys ---> api
+sys --> server
+
+server --> api
+
+api --> rce
+
+api ---> sqli
+
+rce --> sqli
+
+@enduml

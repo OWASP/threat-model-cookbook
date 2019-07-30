@@ -1,0 +1,84 @@
+@startuml
+skinparam monochrome true
+skinparam defaultTextAlignment center
+
+' Root nodes
+agent "Win Game" as win
+agent "Grief Players" as grief
+agent "Gain Fame" as fame
+
+agent "git gud" as gitgud
+win <-- gitgud
+cloud "**...**" as nope
+gitgud <-- nope
+
+agent "Local Cheat" as cheat
+win <-- cheat
+agent "Speed Hack" as speedhack
+agent "No Clip" as noclip
+agent "Wall Hack" as wallhack
+agent "Aim Bot" as aimbot
+cheat <-- speedhack
+cheat <-- noclip
+cheat <-- wallhack
+cheat <-- aimbot
+
+agent "Abuse client/server\nINPUT" as input
+agent "Abuse client/server\nOUTPUT" as output
+speedhack <-- input
+noclip <-- input
+wallhack <-- output
+agent "Spy Memory" as spymem
+output <-- spymem
+agent "Hook DLL" as hookdll
+spymem <-- hookdll
+agent "Windows OS limitations" as windows
+agent "DLL Injection" as dllinjection 
+hookdll <-- windows
+hookdll <-- dllinjection
+agent "Network Sniff" as network
+output <-- network
+
+agent "Disconnect other players" as discon
+win <-- discon
+grief <-- discon
+
+agent "Mess with game progression" as progress
+grief <-- progress
+agent "Hack Ranking" as ranking
+progress <--- ranking
+agent "Hack Equipement/Skins" as equip
+progress <--- equip
+
+agent "Delete Account" as deleteaccount
+grief <-- deleteaccount
+
+agent "Hack Moderation Website" as hackwwwmods
+deleteaccount <-- hackwwwmods
+interface "and" as and
+agent "Gain corp network access" as gaincorp
+hackwwwmods <-- and
+agent "Steal Login Credentials" as steallogin
+agent "Exploit Website Server" as exploitserver
+and <-- gaincorp
+interface "or" as or
+and <-- or
+or <-- steallogin
+or <-- exploitserver
+
+agent "Gain Access to DB" as gainaccessdb
+deleteaccount <-- gainaccessdb
+agent "Hack API REST" as hackapirest
+interface "and" as and2
+and2 <-- gaincorp
+gainaccessdb <-- and2
+and2 <--  hackapirest
+agent "RCE" as rce
+agent "SQLi" as sqli
+hackapirest <-- rce
+hackapirest <-- sqli
+
+agent "Hack Scoreboard" as hackscore
+fame <-- hackscore
+
+@enduml

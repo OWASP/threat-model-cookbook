@@ -1,0 +1,42 @@
+
+@startuml
+skinparam monochrome true
+skinparam defaultTextAlignment center
+
+' Root node
+agent "Open Safe" as goal
+
+' Sub goals
+agent "Pick Lock" as picklock
+agent "Learn Combo" as learncombo
+agent "Cut Open Safe" as cutopensafe
+
+goal --> picklock
+goal --> learncombo
+goal --> cutopensafe
+
+agent "Find Written Combo" as findwritten
+learncombo --> findwritten
+
+agent "Get Combo from Target" as getcombotarget
+learncombo --> getcombotarget
+agent "Extortion" as extortion
+agent "Evesdrop" as evesdrop
+agent "Bribe" as bribe
+getcombotarget --> extortion
+getcombotarget --> evesdrop
+getcombotarget --> bribe
+
+interface "and" as and
+evesdrop --> and
+
+agent "Listen to Conversation" as listenconvo
+agent "Target Says Combo" as targetsayscombo
+and --> listenconvo
+and --> targetsayscombo
+
+' Abstraction (not going to model that)
+cloud "**···**" as another
+extortion --> another
+
+@enduml

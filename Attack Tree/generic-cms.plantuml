@@ -1,0 +1,35 @@
+@startuml
+skinparam monochrome true
+skinparam defaultTextAlignment center
+
+' Root goals
+agent "Steal confidential data" as rootgoal1
+agent "Recon for other attacks" as rootgoal2
+
+' Sub goals
+agent "Gain privileged access" as gainpriv
+rootgoal1 ---> gainpriv
+
+agent "Gather users data" as gatherusers
+rootgoal2 --> gatherusers
+
+agent "Compromise end users" as compromiseenduser
+gatherusers --> compromiseenduser
+rootgoal1 ---> compromiseenduser
+
+agent "XSS" as xss
+compromiseenduser ---> xss
+
+agent "Find user password" as guessupassword
+compromiseenduser --> guessupassword
+
+agent "Brute force" as bruteforce
+guessupassword --> bruteforce
+agent "Find in password dump" as passdump
+guessupassword --> passdump
+
+gainpriv ---> xss
+
+
+
+@enduml

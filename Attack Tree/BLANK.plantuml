@@ -1,0 +1,43 @@
+@startuml
+skinparam monochrome true
+skinparam defaultTextAlignment center
+
+' Root nodes
+agent "Goal" as goal
+agent "What attackers want" as what
+
+agent "Sub-goal" as subgoal
+goal --> subgoal
+
+agent "Sub-goal 2" as subgoal2
+goal --> subgoal2
+
+agent "Ways to get to goal" as subgoal3
+what --> subgoal3
+
+agent "Sub-sub goal" as subsubgoal
+agent "Sub-sub goal 2" as subsubgoal2
+agent "Sub-sub goal 3" as subsubgoal3
+subgoal3 ---> subsubgoal 
+subgoal3 ---> subsubgoal2
+subgoal3 ---> subsubgoal3
+
+' Abstraction (not going to model that)
+cloud "**···**" as another
+subgoal ---> another
+subgoal2 ---> subsubgoal
+
+' Leaf nodes
+agent "exploit" as exploit
+agent "ways to get in" as ways
+agent "weakness" as weakness
+
+subsubgoal ---> exploit
+
+' Chaining of exploits required to get to sub-sub goal
+interface "and" as and
+subsubgoal3 --> and
+and --> weakness
+and --> ways
+
+@enduml

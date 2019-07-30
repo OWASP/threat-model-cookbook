@@ -1,0 +1,54 @@
+@startuml
+skinparam monochrome true
+
+agent "Mass mining" as mine
+agent "Mass scan" as scan
+agent "DDoS" as ddos
+agent "Control many devices \n(Botnet)" as botnet
+mine --> botnet
+scan --> botnet
+ddos --> botnet
+
+agent "Use legit command" as legitcmd
+agent "Exploit device flaws" as flaws
+agent "Obtain device access" as access
+botnet --> legitcmd
+botnet --> flaws
+botnet --> access
+
+agent "Get WiFi LAN access" as wifi
+agent "Get Physical access" as phys
+agent "Place Factory Backdoor" as factory
+agent "Hack cloud server" as cloud
+access --> wifi
+access --> phys
+access --> factory
+access --> cloud
+
+agent "Make my life miserable" as life
+agent "Randomware" as ransomware
+agent "Invade my privacy" as privacy
+agent "Mess with the lights" as mess
+
+life --> ransomware
+life --> privacy
+life --> mess
+
+agent "View my habits" as habits
+agent "Spy me live" as spy
+privacy --> habits
+privacy --> spy
+
+agent "Steal cloud data" as data
+habits --> data
+spy --> data
+data ---> cloud
+
+agent "Sniff network" as sniff
+habits ---> sniff
+spy ---> sniff
+access --> sniff
+sniff --> wifi
+sniff --> phys
+
+@enduml

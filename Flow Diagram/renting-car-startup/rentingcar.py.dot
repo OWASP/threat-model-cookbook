@@ -1,0 +1,199 @@
+digraph tm {
+	graph [
+	fontname = Arial;
+	fontsize = 14;
+	]
+	node [
+	fontname = Arial;
+	fontsize = 14;
+	rankdir = lr;
+	]
+	edge [
+	shape = none;
+	fontname = Arial;
+	fontsize = 12;
+	]
+	labelloc = "t";
+	fontsize = 20;
+	nodesep = 1;
+
+subgraph cluster_ebfdeebacddeedccfbbfdceebeddac {
+	graph [
+		fontsize = 10;
+		fontcolor = firebrick2;
+		style = dashed;
+		color = firebrick2;
+		label = <<i>Inside the car</i>>;
+	]
+
+aaafaecedffadddebbefcdbbbd [
+	shape = square;
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Customer Phone</b></td></tr></table>>;
+]
+cbbaebebaaaddcbbfdfcefdedaacd [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Cadz Mobile</b></td></tr></table>>;
+]
+dcbcdbadccdabbbcfadee [
+	shape = doublecircle;
+	color = black;
+
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color="black"><b>Connected Car</b></font></td></tr></table>>;
+]
+cbcfcfeebbebeafaaafad [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>ABC</b></td></tr></table>>;
+]
+
+}
+
+subgraph cluster_deffadbbecbaffaffcdd {
+	graph [
+		fontsize = 10;
+		fontcolor = firebrick2;
+		style = dashed;
+		color = firebrick2;
+		label = <<i>DMZ</i>>;
+	]
+
+caeacffecebffaadaed [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>API AI</b></td></tr></table>>;
+]
+
+}
+
+subgraph cluster_cacebafcaebeabfbbacecaba {
+	graph [
+		fontsize = 10;
+		fontcolor = firebrick2;
+		style = dashed;
+		color = firebrick2;
+		label = <<i> </i>>;
+	]
+
+edeefeaeddcfbaeaafbed [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>API Gateway</b></td></tr></table>>;
+]
+defcdafddccbccba [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Auth</b></td></tr></table>>;
+]
+feddafabacdadcfdfee [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>API</b></td></tr></table>>;
+]
+cebcbadfdcacbfccebb [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>API AR</b></td></tr></table>>;
+]
+aaedddcebefbebabd [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>API AM/FM</b></td></tr></table>>;
+]
+adadefacfbffbbffbffa [
+	shape = circle;
+	color = black;
+
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color="black"><b>?</b></font></td></tr></table>>;
+]
+dddabcdbcaeffdbaafc [
+	shape = none;
+	color = black;
+	label = <<table sides="TB" cellborder="0" cellpadding="2"><tr><td><font color="black"><b>Flatfile radio stations</b></font></td></tr></table>>;
+]
+dcdcdbdeedebdddaeebbbcc [
+	shape = none;
+	color = black;
+	label = <<table sides="TB" cellborder="0" cellpadding="2"><tr><td><font color="black"><b>Cars DB</b></font></td></tr></table>>;
+]
+
+}
+
+abfadfcbbcaaafabcfbdfefeda [
+	shape = square;
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Owner Phone</b></td></tr></table>>;
+]
+cbaffdfcaeeefbada [
+	shape = circle
+	color = black
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Ownz Mobile</b></td></tr></table>>;
+]
+bceeebfabdfbccabedaccde [
+	shape = square;
+	label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><b>Watson</b></td></tr></table>>;
+]
+	abfadfcbbcaaafabcfbdfefeda -> cbaffdfcaeeefbada [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>Launch</b></font></td></tr></table>>;
+	]
+	aaafaecedffadddebbefcdbbbd -> cbbaebebaaaddcbbfdfcefdedaacd [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>Launch</b></font></td></tr></table>>;
+	]
+	cbaffdfcaeeefbada -> edeefeaeddcfbaeaafbed [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>HTTPS</b></font></td></tr></table>>;
+	]
+	cbbaebebaaaddcbbfdfcefdedaacd -> edeefeaeddcfbaeaafbed [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>HTTPS</b></font></td></tr></table>>;
+	]
+	edeefeaeddcfbaeaafbed -> caeacffecebffaadaed [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>HTTP</b></font></td></tr></table>>;
+	]
+	edeefeaeddcfbaeaafbed -> aaedddcebefbebabd [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>SSH</b></font></td></tr></table>>;
+	]
+	edeefeaeddcfbaeaafbed -> cebcbadfdcacbfccebb [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>HTTP/2</b></font></td></tr></table>>;
+	]
+	edeefeaeddcfbaeaafbed -> feddafabacdadcfdfee [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>HTTP</b></font></td></tr></table>>;
+	]
+	feddafabacdadcfdfee -> dcdcdbdeedebdddaeebbbcc [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	aaedddcebefbebabd -> dddabcdbcaeffdbaafc [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	caeacffecebffaadaed -> bceeebfabdfbccabedaccde [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	edeefeaeddcfbaeaafbed -> defcdafddccbccba [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>Kerberos</b></font></td></tr></table>>;
+	]
+	cebcbadfdcacbfccebb -> adadefacfbffbbffbffa [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	dcbcdbadccdabbbcfadee -> cbcfcfeebbebeafaaafad [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	cbcfcfeebbebeafaaafad -> dcdcdbdeedebdddaeebbbcc [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b> </b></font></td></tr></table>>;
+	]
+	dcbcdbadccdabbbcfadee -> cbbaebebaaaddcbbfdfcefdedaacd [
+		color = black;
+		label = <<table border="0" cellborder="0" cellpadding="2"><tr><td><font color ="black"><b>Bluetooth</b></font></td></tr></table>>;
+	]
+}
