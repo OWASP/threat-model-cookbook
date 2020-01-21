@@ -1,0 +1,63 @@
+@startuml 
+skinparam monochrome true 
+skinparam defaultTextAlignment center 
+
+' Root nodes 
+agent "financial Gain" as financial
+agent "stalk" as stalk
+
+' Sub goals 
+agent "steal customers information" as steal
+agent "view public data" as viewpublic
+
+financial --> steal
+stalk --> steal
+stalk --> viewpublic
+
+agent "search for leak" as leak
+agent "view instagram" as instagram
+viewpublic --> leak
+viewpublic --> instagram
+
+agent "compromised marketing laptop" as laptop
+agent "Hack all the fax" as fax
+
+steal --> laptop
+steal --> fax
+
+cloud "**...**" as cloud1
+cloud "**...**" as cloud2
+laptop --> cloud1
+fax --> cloud2
+
+agent "hack web api" as hackapi
+steal --> hackapi
+
+agent "domain name takeover" as dnstakeover
+agent "intercept incoming traffic" as intercept
+agent "impersonate user" as impersonate
+
+hackapi ---> dnstakeover
+hackapi ---> intercept
+hackapi ---> impersonate
+
+agent "registration jacking" as regjacking
+agent "mitm" as mitm
+agent "find vuln" as findvuln
+
+hackapi ---> findvuln
+
+impersonate --> regjacking
+impersonate --> mitm
+impersonate --> findvuln
+
+interface "and" as and1
+mitm --> and1
+
+agent "user connecting to public wifi" as publicwifi
+agent "clear text protocol" as cleartext
+and1 --> publicwifi
+and1 --> cleartext
+
+ 
+@enduml 
