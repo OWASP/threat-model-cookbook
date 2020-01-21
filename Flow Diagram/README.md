@@ -9,5 +9,8 @@ Tool | File match |
 :--- | :---
 | [pytm](https://github.com/izar/pytm/): A Pythonic framework for threat modeling | `*.py` |
 | [Graphviz](https://graphviz.gitlab.io/) DOT | `*.dot` |
+| Microsoft Visio | `*.vsdx` |
 
 Currently pytm is generating the dot and then Graphviz is used to create outputs.
+
+Files starting with `altN-` are alternate version of the same system being modeled by a different person.
