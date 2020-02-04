@@ -1,3 +1,5 @@
+([back to home](../README.md))
+
 # Flow Diagrams
 Examples of flow diagrams using different tools to create them.
 
@@ -61,7 +63,9 @@ Files starting with `altN-` are alternate version of the same system being model
 <img src="https://raw.githubusercontent.com/filetrust/threat-model-cookbook/master/Flow%20Diagram/renting-car-startup/rentingcar.py.png"/>
 
 
+## sokify
 
-
+(note: there are 2 files in this folder that need conversion from analoge diagram to digital)
+<img src="https://raw.githubusercontent.com/filetrust/threat-model-cookbook/master/Flow%20Diagram/sokify/alt1-sokify.jpg"/>
 
 
