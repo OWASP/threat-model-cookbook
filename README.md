@@ -6,8 +6,8 @@ You can learn from those models, use them a base to start your own, or contribut
 
 ## See Cookbook 
 
-- [Attack Trees](Attack%20Tree)
-- [Flow Diagrams](Flow%20Diagram)
+- [Attack Trees](Attack%20Tree/README.md)
+- [Flow Diagrams](Flow%20Diagram/README.md)
 
 ## links
 
