@@ -7,7 +7,7 @@ You can learn from those models, use them a base to start your own, or contribut
 ## See Cookbook 
 
 - [Attack Trees](Attack%20Tree)
-- [Flow Diagrams](Flow%20TDiagram)
+- [Flow Diagrams](Flow%20Diagram)
 
 ## links
 
