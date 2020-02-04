@@ -31,3 +31,12 @@ Tool | File match |
 ### Renting Car
 
 <img src="https://raw.githubusercontent.com/filetrust/threat-model-cookbook/master/Attack%20Tree/rentingcar.plantuml.svg?sanitize=true"/>
+
+### IOT Device - part1
+
+<img src="https://raw.githubusercontent.com/filetrust/threat-model-cookbook/master/Attack%20Tree/iot-device.part1.plantuml.svg?sanitize=true"/>
+iot-device.part1.plantuml.svg
+
+### IOT Device - part1
+
+<img src="https://raw.githubusercontent.com/filetrust/threat-model-cookbook/master/Attack%20Tree/iot-device.part2.plantuml.svg?sanitize=true"/>
