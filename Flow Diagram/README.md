@@ -11,7 +11,7 @@ Tool | File match |
 | [Threat Dragon](https://owasp.org/www-project-threat-dragon/): The OWASP threat modelling tool | `*.json` |
 | [Graphviz](https://graphviz.gitlab.io/) DOT | `*.dot` |
 | Microsoft Visio | `*.vsdx` |
-| Physical world paper or whiteboard | `*.jpg` |
+| Physical whiteboard or paper | `*.jpg` |
 
 Currently pytm is generating the dot and then Graphviz is used to create outputs.
 
