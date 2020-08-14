@@ -8,6 +8,9 @@ https://owasp.org/www-project-threat-model-cookbook/
 
 https://twitter.com/OWASP_tmcb
 
+## Disclaimer
+Examples provided in this repository are not representations of secure systems, but rather insecure systems that are easy to model. Most of them are made up systems that doesn't exist in reality. Any resemblance to real life systems is purely coincidental.
+
 ## Contributing
 We are welcoming PRs containing examples to add to the cookbook. If you want to add new threat models, create more versions based of existing drafts, feel free to directly submit a PR.
 
