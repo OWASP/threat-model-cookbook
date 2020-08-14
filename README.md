@@ -21,7 +21,6 @@ Here's some guidelines on how our file structure works:
 * The name of the system needs to be using dashes and alphanumeric characters only. No spaces.
 * The files needs to have a specific extension depending on the format: `system-name.tool` and `system-name.tool.exportfiletype`. As examples, we have the code file `cryptowallet.plantuml` and the output to an image file generated from that code as `cryptowallet.plantuml.svg`. Refer to the README.md in each top-level folder for a list of tools and their file extension matches.
 * If you have multiple representation of the same system using the same tool, we suggest you add `altN-` at the start of the file where `N` is a number.
-* If you have multiple versions of the same system using the same tool, you could also show progression over time by adding `vN-` at the start.
 
 If this sounds complicated and you just want to contribute, you can still submit a PR and we'll refactor it for you. We might have more automation and outside references in the future so we want to keep a strict file structure.
 
