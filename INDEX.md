@@ -10,7 +10,7 @@ A generic model with generic name that doesn't represent a particular system. Us
 
 [![BLANK Attack Tree](https://raw.githubusercontent.com/OWASP/threat-model-cookbook/master/Attack%20Tree/BLANK.plantuml.svg "BLANK Attack Tree")](./Attack%20Tree/BLANK.plantuml)
 
-[![BLANK Template](https://raw.githubusercontent.com/OWASP/threat-model-cookbook/master/Template/BLANK-draw.io.onepager.xml.svg "BLANK Template")](./Template/BLANK)
+[![BLANK Template](https://raw.githubusercontent.com/OWASP/threat-model-cookbook/master/Template/BLANK/BLANK-draw.io.onepager.xml.svg "BLANK Template")](./Template/BLANK)
 
 
 
