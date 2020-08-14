@@ -15,6 +15,7 @@ Examples provided in this repository are not representations of secure systems, 
 We are welcoming PRs containing examples to add to the cookbook. If you want to add new threat models, create more versions based of existing drafts, feel free to directly submit a PR.
 
 Here's some guidelines on how our file structure works:
+* [INDEX.md](INDEX.md) contains all systems that are modeled with embeded pictures and short descriptions.
 * Top-level directories are the type of threat models. Example: `Flow Diagram`.
 * If your threat model has 1 or 2 files, you can put the files directly in that directory. If they have more, please create a folder with the name of your system to be modeled.
 * The name of the system needs to be using dashes and alphanumeric characters only. No spaces.
