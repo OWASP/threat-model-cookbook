@@ -8,7 +8,8 @@
   "detail": {
     "contributors": [
       {
-        "name": "Tom Brown"
+        "name": "Tom Brown",
+        "$$hashKey": "object:9"
       }
     ],
     "diagrams": [
@@ -335,6 +336,10 @@
             },
             {
               "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "x": 115,
@@ -356,6 +361,10 @@
             },
             {
               "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "x": 339,
@@ -377,6 +386,10 @@
             },
             {
               "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "id": "b394f9f7-07ca-42bc-b616-ad77c6fbfcce"
@@ -430,6 +443,10 @@
             },
             {
               "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "id": "0d9909ea-1398-4898-be81-cf1c808324dc"
@@ -480,6 +497,10 @@
             },
             {
               "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "id": "ec574fb4-87e7-494b-88dc-2a3c99172067"
@@ -488,6 +509,10 @@
                 "id": "3e75b596-9c70-41b6-a2cf-a15899c254d3"
               },
               "vertices": [
+                {
+                  "x": 607,
+                  "y": 93
+                },
                 {
                   "x": 645,
                   "y": 110
@@ -530,6 +555,10 @@
             },
             {
               "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "x": 551,
@@ -551,6 +580,10 @@
             },
             {
               "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "id": "936557f9-22e2-4bac-bb70-0089c5c2fbe1"
@@ -601,6 +634,10 @@
             },
             {
               "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "x": 398,
@@ -622,6 +659,10 @@
             },
             {
               "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "id": "0d9909ea-1398-4898-be81-cf1c808324dc"
@@ -675,6 +716,10 @@
             },
             {
               "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "id": "bdd3e115-4b92-4020-90b7-c3351dba292b"
@@ -716,6 +761,10 @@
             },
             {
               "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
               "smooth": true,
               "source": {
                 "id": "a25bbb4e-093f-4238-a620-31efdee452dc"
@@ -760,7 +809,8 @@
         "size": {
           "height": 615,
           "width": 851.3660278320312
-        }
+        },
+        "$$hashKey": "object:11"
       }
     ],
     "reviewer": "Jane Smith"
