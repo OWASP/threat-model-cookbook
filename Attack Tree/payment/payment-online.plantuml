@@ -1,0 +1,187 @@
+@startuml
+skinparam backgroundcolor monochrome
+'skinparam monochrome true
+skinparam defaultTextAlignment center
+skinparam titleFontSize 22
+skinparam handwritten true
+
+!define SPRITESURL https://raw.githubusercontent.com/rabelenda/cicon-plantuml-sprites/v1.0/sprites
+!includeurl SPRITESURL/user.puml
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.2.0
+!includeurl ICONURL/common.puml
+!includeurl ICONURL/font-awesome-5/cc_stripe.puml
+
+skinparam rectangle {
+  borderColor Black
+  backgroundColor #fff
+}
+skinparam agent {
+  borderColor Black
+  backgroundColor #fff
+}
+skinparam sequence{
+  arrowColor Black
+}
+skinparam usecase {
+  borderColor #fff
+  backgroundColor #fff
+  shadowing false
+  fontSize 18
+}
+
+title
+
+Threat Model | Attack Tree | Payment Online
+
+end title
+
+'legend left
+'text
+'endlegend
+
+left footer
+[[https://github.com/TClark000/threat-models/blob/base/Flow%20Diagram/payment/img/payment_online_advanced.html{Report} Flow Diagram Report with Vulnerabilities]]
+github.com/tclark000/threat-models/blob/base/Flow Diagram/payment/img/payment_online_advanced.html
+
+end footer
+
+(key entities/actors within \nthe payment process) as subtitle
+
+rectangle "<$user>\nThreat" as threat #Thistle
+rectangle "<$user>\nCustomer" as customer #LightGoldenRodYellow
+rectangle "<$user>\nMerchant" as merchant #LightGoldenRodYellow
+FA5_CC_STRIPE(stripe,Stripe) #LightGoldenRodYellow
+
+'threat  <. subtitle
+'subtitle .> stripe
+'subtitle .> merchant
+'subtitle .> customer
+subtitle .> threat
+stripe <. subtitle
+merchant <. subtitle
+customer <. subtitle
+
+' Root nodes
+agent "Intent - Disrupt Merchant Business" as goalDisrupt
+agent "Intent - Steal Credit Card Details" as goalSteal
+
+subtitle ... goalDisrupt #fff
+subtitle ... goalSteal #fff
+
+' goalDisrupt
+agent "Prevent Purchases \nor Subscriptions" as goalPrevent
+agent "Use fraudulent \ncredit card" as goalFraudulentCC
+agent "Take advantage of Misconfiguration \n& Vulnerabilities" as goalApp
+agent "Target Stripe API" as goalStripeApi
+agent "Site Displays \nDifferent Content" as goalSite
+agent "Site no Longer Responds" as goalSite2
+agent "Steal customers" as goalStealCust
+agent "Create Fake Payments \nwith Stolen Cards" as goalFakePayments
+agent "Issue Fake Refunds \nand Cancel Orders" as goalRefund
+
+goalDisrupt --> goalFakePayments
+goalDisrupt--> goalRefund
+goalDisrupt --> goalPrevent
+goalDisrupt --> goalFraudulentCC
+goalDisrupt --> goalApp
+goalDisrupt --> goalStripeApi
+goalDisrupt --> goalStealCust
+goalDisrupt --> goalSite
+goalDisrupt --> goalSite2
+
+note top of goalFraudulentCC #LightGoldenRodYellow: Thwarted by implementing 3D Secure
+
+agent "Target Merchant API" as goalMerchantApi
+agent "Create a \nMock website" as goalMock
+
+goalPrevent --> goalMerchantApi
+goalStealCust --> goalMock
+
+agent "Denial of Service" as goalDoS
+
+goalMerchantApi --> goalDoS
+
+agent "Tamper with Application \ncausing outage" as goalCrash
+agent "Compromise Merchant \nWeb Servers" as goalServers
+
+goalApp --> goalCrash
+goalCrash --> goalServers
+
+agent "Command Line Execution \nthrough SQL Injection" as goalCLE
+agent "Path Traversal" as goalPathTraversal
+agent "Session Hijacking \n- ServerSide" as goalSessionServerSide
+agent "Using Malicious Files" as goalMaliciousFiles
+agent "XSS Targeting \nNon-Script Elements" as goalXSS
+
+goalServers --> goalCLE
+goalServers --> goalPathTraversal 
+goalServers --> goalSessionServerSide
+goalServers --> goalMaliciousFiles
+goalServers --> goalXSS
+
+agent "Gain access to Stripes \nMerchant Dashboard" as goalMerchantDashboard
+agent "Compromise and \nor steal employee laptop \nand mobile phone" as goalLaptop
+goalFakePayments--> goalMerchantDashboard
+goalRefund --> goalMerchantDashboard
+goalMerchantDashboard  --> goalLaptop
+
+agent "Domain Hijacking" as goalDomain
+agent "Denial of Service Attack" as goalDoS2
+
+goalSite --> goalDomain
+goalSite2 --> goalDomain
+goalSite2 --> goalDoS2
+
+' goalSteal
+agent "Target Customer Details \nstored by Merchant (db)" as goalCustLogin
+agent "Target Customer Client \n(home pc)" as goalCustClient
+agent "Target Stripe" as goalStripe
+agent "Customer uses Public WiFi \nto make a Payment" as goalPublicWiFi
+
+goalSteal --> goalCustLogin
+goalSteal --> goalCustClient
+goalSteal --> goalStripe
+goalSteal --> goalPublicWiFi
+
+agent "Target known \nCustomers of Merchant" as goalSocial
+agent "Social Engineering \nsuch as phishing" as goalSocialEng
+agent "Take advantage of \nMisconfiguration \n& Vulnerabilities" as goalStripeMisConfig
+agent "Insecure Wireless \nProtocols (WEP)" as goalMitM
+
+goalCustLogin  --> goalSocial
+goalCustClient --> goalSocial
+goalStripe --> goalSocialEng
+goalStripe --> goalStripeMisConfig
+goalPublicWiFi --> goalMitM
+
+agent "Lateral movement \nwithin Organization" as goalLateral
+agent "Target Stripe for \nAdministrative rights" as goalStripeAdmin
+agent "Man in the Middle Attack\n(MiTM)" as goalManInMiddle
+
+goalSocialEng --> goalStripeAdmin
+goalStripeAdmin --> goalLateral
+goalStripeMisConfig --> goalStripeAdmin
+goalStripeMisConfig --> goalLateral
+goalMitM --> goalManInMiddle
+
+agent "Inject false Info & \nIntercept Data transfer" as goalDataWiFi
+
+goalManInMiddle --> goalDataWiFi
+
+goalMock  --> goalSocial
+goalStripeApi --> goalDoS
+
+agent "Social Engineering \nphishing" as goalPhishing
+agent "Session Hijacking" as goalSessionHijacking
+
+goalSocial --> goalPhishing
+goalSocial --> goalSessionHijacking
+
+agent "Steal Customer Data" as goalData
+agent "Transfer Money to \nWrong Account" as goalBankAccount
+
+goalLateral --> goalData
+goalDataWiFi --> goalBankAccount
+
+@enduml
